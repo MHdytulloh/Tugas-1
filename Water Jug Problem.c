@@ -80,11 +80,48 @@ int main()
                 B+=pindahkeB;
             }
         }
+        else if (perintah == 6) {
+            if ((B==5)&&(A==0)) {
+                A=3;
+                B=2;
+            }
+            else if ((B<5)&&(A==0)) {
+                A+=B;
+                B-=A;
+            }
+            else if ((B==5)&&(A<3 && B>0)) {
+                pindahkeA = 3-A;
+                if (B<=pindahkeA) {
+                    pindahkeA=B;
+                }
+                else if (B>pindahkeA) {
+                    pindahkeA=pindahkeA;
+                }
+                B-=pindahkeA;
+                A+=pindahkeA;
+            }
+            else if ((A<3)&&(B<5 && B>0)) {
+                pindahkeA = 3-A;
+                if (B<=pindahkeA) {
+                    pindahkeA=B;
+                }
+                else if (B>pindahkeA) {
+                    pindahkeA=pindahkeA;
+                }
+                B-=pindahkeA;
+                A+=pindahkeA;
+            }
+        }
         else {
             printf("perintah invalid!");
             printf("\n");
         }
     }
+    printf("Air pada ember A = %i", A);
+    printf("\n");
+    printf("Air pada ember B = %i", B);
+    printf("\n");
+    printf("Kamu Menang!");
 
     return 0;
 }
